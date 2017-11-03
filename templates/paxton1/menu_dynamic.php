@@ -8,12 +8,12 @@ foreach($menus as $category => $menu) {
 		continue;
 	}
 	
-	$size = count($menus[$category]);
 	echo '<div id="menu-top">' . $config['menu_categories'][$category]['name'] . '</div>
 <div id="menu-cnt">
 	<ul>
 		<li>
 			<ul>';
+	
 	foreach($menus[$category] as $_menu) {
 		if(strpos(trim($_menu['link']), 'http') === 0) {
 			echo '<li><a href="' . $_menu['link'] . '" target="_blank">' . $_menu['name'] . '</a></li>';
